@@ -12,14 +12,15 @@ void destroilista(celula* inicio);
 
 int main(int argc, char const *argv[])
 {
-    celula *iniciar;
+    celula *iniciar,*temp;
     int valor;
     char verifi;
-    
+    cin>>valor;
+    iniciar = AdicionaCelula(valor, iniciar); 
     do{
         cout<<"digite o valor: ";
         cin>>valor;
-        iniciar = AdicionaCelula(valor, iniciar); 
+        temp = AdicionaCelula(valor, iniciar); 
         cout<<"deseja adiconar mais?(s/n)"<<endl;
         cin>>verifi;
     }while(verifi=='s');
