@@ -29,3 +29,18 @@ stack *adicionaTopo(int valor, stack* topo){
         return topo;
     }
 }
+void RemoverTopo(stack *topo){
+    if(topo==NULL){
+        cout<<"nada a remover"<<endl;
+    }else{
+        if(topo->cima==NULL){
+            cout<<"existe apenas o valor atual na pilha"<<endl;
+            delete topo;
+        }else{
+            while(topo->cima!=NULL){
+                topo=topo->cima;
+            }
+            delete topo;
+        }
+    }
+}
